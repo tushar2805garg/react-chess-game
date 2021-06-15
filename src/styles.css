@@ -1,0 +1,407 @@
+body {
+    background-color: bisque;
+    text-align: center;
+    margin: 0px auto;
+  }
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    bottom: 0px;
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 200px;
+    margin-right: 100px;
+    text-align: left;
+    color: darkgreen;
+  }
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    color: orange;
+  }
+  .img {
+    height: 70px;
+    width: 70px;
+  }
+  .row {
+    height: 70px;
+  }
+  .cell {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    outline: 1px solid;
+    text-align: center;
+    /* background-color: brown; */
+  }
+  .blue {
+    background-color: blue;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .red {
+    background-color: red;
+  }
+  .selected {
+    background-color: white;
+  }
+  .brown {
+    background-color: brown;
+  }
+  .light-brown {
+    background-color: burlywood;
+  }
+  .loader {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  .Totaltime {
+    position: absolute;
+    top: 70px;
+    left: 35px;
+  }
+  .TimeRemaining {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+  }
+  .btn-left {
+    position: absolute;
+    top: 150px;
+    left: 35px;
+  }
+  .btn-right {
+    position: absolute;
+    top: 150px;
+    right: 200px;
+  }
+  .heading {
+    margin-bottom: 2px;
+  }
+  button {
+    font-family: "Montserrat", sans-serif;
+    background-color: navajowhite;
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+    white-space: nowrap; /*this was suggested by jaunt, thanks */
+  }
+  button:hover {
+    width: 145px;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+    cursor: pointer;
+  }
+  @media (max-width: 1200px) and (min-width: 1000px) {
+    .Totaltime {
+      width: 200px;
+      top: 40px;
+      left: 30px;
+    }
+    .TimeRemaining {
+      width: 200px;
+      top: 40px;
+      right: 10px;
+    }
+    .btn-left {
+      top: 150px;
+      left: 50px;
+    }
+    .btn-right {
+      top: 150px;
+      right: 100px;
+    }
+  }
+  @media (max-width: 1000px) and (min-width: 850px) {
+    h2 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .Totaltime {
+      width: 100px;
+      top: 40px;
+      left: 10px;
+    }
+    .TimeRemaining {
+      width: 100px;
+      top: 40px;
+      right: 40px;
+    }
+    .btn-left {
+      top: 250px;
+      left: 10px;
+    }
+    .btn-right {
+      top: 250px;
+      right: 40px;
+    }
+  }
+  @media (max-width: 850px) and (min-width: 570px) {
+    .heading {
+      margin-bottom: 80px;
+    }
+    h2 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .Totaltime {
+      width: 150px;
+      font-size: 30px;
+      top: 10px;
+      left: 10px;
+    }
+    .TimeRemaining {
+      width: 150px;
+      font-size: 30px;
+      top: 10px;
+      right: 20px;
+    }
+    .btn-left {
+      top: 70px;
+      left: 180px;
+    }
+    .btn-right {
+      top: 70px;
+      right: 180px;
+    }
+  }
+  @media (max-width: 570px) and (min-width: 500px) {
+    h2 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .row {
+      height: 60px;
+    }
+    .cell {
+      height: 60px;
+      width: 60px;
+    }
+    .img {
+      height: 60px;
+      width: 60px;
+    }
+    .heading {
+      margin-bottom: 50px;
+    }
+    .Totaltime {
+      width: 90px;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+    .TimeRemaining {
+      width: 90px;
+      top: 10px;
+      right: 20px;
+      font-size: 20px;
+    }
+    .btn-left {
+      top: 60px;
+      left: 120px;
+    }
+    .btn-right {
+      top: 60px;
+      right: 130px;
+    }
+    button {
+      font-family: "Montserrat", sans-serif;
+      background-color: navajowhite;
+      width: 100px;
+      height: 40px;
+      overflow: hidden;
+      -webkit-transition: width 1s;
+      transition: width 1s;
+      white-space: nowrap; /*this was suggested by jaunt, thanks */
+    }
+    button:hover {
+      width: 120px;
+      -webkit-transition: width 1s;
+      transition: width 1s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 500px) and (min-width: 400px) {
+    h2 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .row {
+      height: 50px;
+    }
+    .cell {
+      height: 50px;
+      width: 50px;
+    }
+    .img {
+      height: 50px;
+      width: 50px;
+    }
+    .heading {
+      margin-bottom: 50px;
+    }
+    .Totaltime {
+      width: 90px;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+    .TimeRemaining {
+      width: 90px;
+      top: 10px;
+      right: 20px;
+      font-size: 20px;
+    }
+    .btn-left {
+      top: 60px;
+      left: 120px;
+    }
+    .btn-right {
+      top: 60px;
+      right: 130px;
+    }
+    button {
+      font-family: "Montserrat", sans-serif;
+      background-color: navajowhite;
+      width: 80px;
+      height: 40px;
+      overflow: hidden;
+      -webkit-transition: width 1s;
+      transition: width 1s;
+      white-space: nowrap; /*this was suggested by jaunt, thanks */
+    }
+    button:hover {
+      width: 100px;
+      -webkit-transition: width 1s;
+      transition: width 1s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 400px) and (min-width: 330px) {
+    h2 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .heading {
+      margin-bottom: 50px;
+    }
+    .row {
+      height: 40px;
+    }
+    .cell {
+      height: 40px;
+      width: 40px;
+    }
+    .img {
+      height: 40px;
+      width: 40px;
+    }
+    .Totaltime {
+      width: 50px;
+      font-size: 15px;
+      top: 20px;
+      left: 10px;
+    }
+    .TimeRemaining {
+      width: 50px;
+      font-size: 15px;
+      top: 20px;
+      right: 10px;
+    }
+    .btn-left {
+      top: 60px;
+      left: 80px;
+    }
+    .btn-right {
+      top: 60px;
+      right: 100px;
+    }
+    button {
+      font-family: "Montserrat", sans-serif;
+      background-color: navajowhite;
+      width: 70px;
+      height: 20px;
+      overflow: hidden;
+      -webkit-transition: width 0.5s;
+      transition: width 0.5s;
+      white-space: nowrap; /*this was suggested by jaunt, thanks */
+    }
+    button:hover {
+      width: 75px;
+      -webkit-transition: width 0.5s;
+      transition: width 0.5s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 330px) and (min-width: 200px) {
+    h2 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .heading {
+      margin-bottom: 50px;
+    }
+    .row {
+      height: 30px;
+    }
+    .cell {
+      height: 30px;
+      width: 30px;
+    }
+    .img {
+      height: 30px;
+      width: 30px;
+    }
+    .Totaltime {
+      width: 50px;
+      font-size: 15px;
+      top: 20px;
+      left: 10px;
+    }
+    .TimeRemaining {
+      width: 50px;
+      font-size: 15px;
+      top: 20px;
+      right: 10px;
+    }
+    .btn-left {
+      top: 60px;
+      left: 80px;
+    }
+    .btn-right {
+      top: 60px;
+      right: 100px;
+    }
+    button {
+      font-family: "Montserrat", sans-serif;
+      background-color: navajowhite;
+      width: 60px;
+      height: 20px;
+      overflow: hidden;
+      -webkit-transition: width 1s;
+      transition: width 1s;
+      white-space: nowrap; /*this was suggested by jaunt, thanks */
+    }
+    button:hover {
+      width: 70px;
+      -webkit-transition: width 1s;
+      transition: width 1s;
+      cursor: pointer;
+    }
+  }
+  
