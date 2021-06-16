@@ -53,6 +53,9 @@ class App extends React.Component {
       if (i >= 6) {
         Teamname = "B";
       }
+      if(this.turn==="A" && Teamname !=="Empty"){
+         Teamname = Teamname === "A" ? "B" :"A";
+      }
       for (var j = 0; j < 8; j++) {
         if (j === 0 || j === 7) {
           player = "Rook";
@@ -215,8 +218,16 @@ class App extends React.Component {
         }
       }
     }
+
+
+
+    let z=this.state.board[xx][yy].TEAMNAME;
     if (player === "Pawn") {
-      if (this.state.board[xx][yy].TEAMNAME === "A") {
+    // To render states in turn A for Pawn Special Case..
+      if(this.turn === "A"){
+        z = z === "A" ? "B" : "A";
+      }
+      if (z === "A") {
         if (xx === 1) {
           if (
             arr[xx + 1][yy] === 1 &&
@@ -283,6 +294,7 @@ class App extends React.Component {
         width: 275,
         padding: '0.7em',
         timer:2000,
+        showConfirmButton:false,
         customClass: {
             heightAuto: false,
             title: 'title-class',
@@ -334,6 +346,12 @@ class App extends React.Component {
     if (
       play === "Pawn" &&
       arr[this.state.prevx][this.state.prevy].TEAMNAME === "B"
+    ) {
+      play = "PawnBlack";
+    }
+    if (
+      play === "Pawn" &&
+      arr[this.state.prevx][this.state.prevy].TEAMNAME === "A" && this.turn ==="A"
     ) {
       play = "PawnBlack";
     }
@@ -425,6 +443,10 @@ class App extends React.Component {
     }
   }
   publishMove(a,b,c,d) {
+    a=Math.abs(7-a);
+    b=Math.abs(7-b);
+    c=Math.abs(7-c);
+    d=Math.abs(7-d);
     let arr=this.state.board;
     if(arr[c][d].PLAYER == "King"){
       swal.fire({
@@ -453,10 +475,13 @@ class App extends React.Component {
     let piecename = now.PLAYER;
     if (piecename !== "Empty") {
       if (now.TEAMNAME === "A") {
+        if(this.turn === "A" && piecename === "Pawn"){
+          piecename="PawnBlack";
+        }
         const get = this.SetToSpecifiedValue(x, y, new_moves[piecename], 1);
         this.setState({ TEAMA: get }); 
       } else {
-        if (piecename === "Pawn") {
+        if (piecename === "Pawn" && this.turn === "B") {
           piecename = "PawnBlack";
         }
         const get = this.SetToSpecifiedValue(x, y, new_moves[piecename], 1);

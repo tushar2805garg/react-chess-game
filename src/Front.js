@@ -14,7 +14,8 @@ export default class Front extends Component {
     const API_SUBSCRIBE_KEY=process.env.REACT_APP_SUBSCRIBEKEY
     this.pubnub = new PubNubReact({
       publishKey: API_PUBLISH_KEY, // Put your own publish key here after creating account on pubnub
-      subscribeKey: API_SUBSCRIBE_KEY  // Put your own subscribe key here after creating account on pubnub   
+      subscribeKey: API_SUBSCRIBE_KEY,  // Put your own subscribe key here after creating account on pubnub  
+      uuid:"CREATED_REACT_CHESS_GAME" 
     });
     this.state = {
       piece: '',
@@ -160,6 +161,7 @@ export default class Front extends Component {
             title: 'Error',
             text: 'Game in progress. Try another room.',
             width: 275,
+            height: 300,
             padding: '0.7em',
             customClass: {
                 heightAuto: false,
@@ -208,7 +210,7 @@ export default class Front extends Component {
        <h1> Chess Game </h1>
        <h1> """When you see a good move look for a better one""" </h1>
        <h1> Game Instructions: </h1>
-       <h2>⦿ White Goes First </h2>
+       <h2>⦿ Creator Goes First </h2>
        <h2>
          {" "}
         ⦿ Whenever you hover over a piece of chess it shows you suggested moves.{" "}
