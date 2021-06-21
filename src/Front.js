@@ -44,7 +44,7 @@ export default class Front extends Component {
         // Start the game once an opponent joins the channel
         if(msg.message.notRoomCreator){
           // Create a different channel for the game
-          this.gameChannel = 'tictactoegame--' + this.roomId;
+          this.gameChannel = 'reactchessgame--' + this.roomId;
 
           this.pubnub.subscribe({
             channels: [this.gameChannel]
@@ -65,7 +65,7 @@ export default class Front extends Component {
   onPressCreate = (e) => {
     // Create a random name for the channel
     this.roomId = shortid.generate().substring(0,5);
-    this.lobbyChannel = 'tictactoelobby--' + this.roomId;
+    this.lobbyChannel = 'reactchesslobby--' + this.roomId;
 
     this.pubnub.subscribe({
       channels: [this.lobbyChannel],
@@ -128,7 +128,7 @@ export default class Front extends Component {
   // Join a room channel
   joinRoom = (value) => {
     this.roomId = value;
-    this.lobbyChannel = 'tictactoelobby--' + this.roomId;
+    this.lobbyChannel = 'reactchesslobby--' + this.roomId;
 
     // Check the number of people in the channel
     this.pubnub.hereNow({
