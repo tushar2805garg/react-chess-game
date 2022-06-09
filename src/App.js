@@ -9,6 +9,7 @@ import diffboard from "./components/diffboard";
 import SetToSpecifiedValue from "./components/SetToSpecifiedValue";
 import ImagetoShow from "./components/ImageToShow";
 import WhichColorToShow from "./components/WhchColorToShow";
+import {Link} from "react-router-dom";
 // Creator gets Piece A and join gets Piece B.
 // and this is stored inside this.turn
 // A for white and B for black.
