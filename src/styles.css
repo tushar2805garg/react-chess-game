@@ -3,6 +3,9 @@ body {
     text-align: center;
     margin: 0px auto;
   }
+  .remove-line{
+    text-decoration: none;
+  }
   h3 {
     font-family: "Montserrat", sans-serif;
     position: relative;

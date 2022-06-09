@@ -1,4 +1,5 @@
 export default {
+  // Here first image is for white and second for black.
     Pawn: [
       "https://upload.wikimedia.org/wikipedia/commons/0/04/Chess_plt60.png",
       "https://upload.wikimedia.org/wikipedia/commons/c/cd/Chess_pdt60.png"

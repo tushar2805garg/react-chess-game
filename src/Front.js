@@ -233,7 +233,10 @@ export default class Front extends Component {
                     onClick={(e) => this.onPressJoin()}
                     > Join 🧐
                   </button>
-                </div>                        
+                </div>  
+                <div className='button-container'>
+                <button><a href='/computer' alt='Broken Link'className='remove-line' >Against Computer</a></button>
+                  </div>                      
                 <h3> Made with ♥ by Tushar Garg </h3>
               </div>
             </div>
