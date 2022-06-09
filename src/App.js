@@ -392,11 +392,11 @@ class App extends React.Component {
     }
     return (
       <div className="App ">
-        {/* {this.state.isgameOver === 1 ? (
+        {this.state.isgameOver === 1 ? (
           <Link to="/">
             <button className="btn-right"> Go back</button>
           </Link>
-        ) : null} */}
+        ) : null}
         <h1 className="heading"> {this.state.heading} </h1>
         <h1 className="Totaltime"> Total time: {this.state.totalTime} secs</h1>
         <h1 className="TimeRemaining">
