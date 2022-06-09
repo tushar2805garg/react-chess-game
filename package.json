@@ -17,6 +17,10 @@
     "shortid": "^2.2.16",
     "sweetalert2": "^8.19.0"
   },
+  "engines": {
+    "node": "14.17.1",
+    "npm": "6.14.13"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
